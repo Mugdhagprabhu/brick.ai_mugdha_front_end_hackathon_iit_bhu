@@ -1,0 +1,47 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #F1F6F4;
+  --card: #D9E8E2;
+  --primary: #FFC801;
+  --secondary: #FF9932;
+  --dark: #114C5A;
+  --dark2: #172B36;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  background:var(--bg);
+  color:#172B36;
+  font-family:"Inter",sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6{
+  font-family:"JetBrains Mono",monospace;
+}
+
+@keyframes brickPop {
+  0% {
+    opacity: 0;
+    transform: translateY(-80px) rotate(-8deg) scale(.5);
+  }
+
+  70% {
+    transform: translateY(8px) scale(1.08);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0) rotate(0) scale(1);
+  }
+}
+
+.animate-brick-pop {
+  opacity: 0;
+  animation: brickPop .8s cubic-bezier(.16,1,.3,1) forwards;
+}
